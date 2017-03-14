@@ -1,0 +1,31 @@
+{
+  "name": "dockerode-mock",
+  "version": "0.2.0",
+  "description": "Mocking module for dockerode",
+  "main": "index.js",
+  "dependencies": {
+    "dockerode": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vmlweb/Dockerode-Mock.git"
+  },
+  "keywords": [
+    "mock",
+    "dockerode",
+    "docker",
+    "testing",
+    "test",
+    "stub"
+  ],
+  "author": "Victor Leach <mail@vmlweb.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vmlweb/Dockerode-Mock/issues"
+  },
+  "homepage": "https://github.com/Vmlweb/Dockerode-Mock#readme"
+}
