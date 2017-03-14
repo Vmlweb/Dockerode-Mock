@@ -18,7 +18,11 @@ module.exports = function(opts){
 			
 			//Pass to overide
 			const overide = module.exports.overides[name]
-			callback(overide.error, overide)
+			if (overide.hasOwnProperty('error')){
+				throw new Error(overide.error)
+			}else{
+				callback(undefined, overide)
+			}
 			
 		}else{
 			console.log('Docker made native request to ' + name)
