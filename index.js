@@ -40,7 +40,7 @@ module.exports = function(opts){
 			}
 			
 		}else{
-			console.log('Docker made native request to ' + chosen)
+			console.log('Docker made native request to ' + full)
 			
 			//Otherwise default to modem
 			return docker.modem.___dial(...args)
