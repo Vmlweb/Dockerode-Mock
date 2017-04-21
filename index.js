@@ -15,11 +15,6 @@ module.exports = function(opts){
 		const url = request.method + ' ' + opts.host + ':' + opts.port + request.path
 		const full = request.method + ' ' + opts.protocol + '://' + opts.host + ':' + opts.port + request.path
 		
-		console.log(name)
-		console.log(host)
-		console.log(url)
-		console.log(full)
-		
 		//Check whether overide exists
 		let chosen
 		if (module.exports.overides.hasOwnProperty(name)){
