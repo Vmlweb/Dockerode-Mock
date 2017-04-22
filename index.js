@@ -17,13 +17,13 @@ module.exports = function(opts){
 		
 		//Check whether overide exists
 		let chosen
-		if (module.exports.overides.hasOwnProperty(name)){
+		if (module.exports.overrides.hasOwnProperty(name)){
 			chosen = name
-		}else if (module.exports.overides.hasOwnProperty(host)){
+		}else if (module.exports.overrides.hasOwnProperty(host)){
 			chosen = host
-		}else if (module.exports.overides.hasOwnProperty(url)){
+		}else if (module.exports.overrides.hasOwnProperty(url)){
 			chosen = url
-		}else if (module.exports.overides.hasOwnProperty(full)){
+		}else if (module.exports.overrides.hasOwnProperty(full)){
 			chosen = full
 		}
 		
@@ -32,7 +32,7 @@ module.exports = function(opts){
 			console.log('Docker made overidden request to ' + chosen)
 			
 			//Pass to overide
-			const overide = module.exports.overides[chosen]
+			const overide = module.exports.overrides[chosen]
 			if (overide.hasOwnProperty('error')){
 				throw new Error(overide.error)
 			}else{
@@ -49,4 +49,4 @@ module.exports = function(opts){
 	return docker
 }
 
-module.exports.overides = {}
+module.exports.overrides = {}

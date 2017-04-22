@@ -18,13 +18,13 @@ Finally specify the overrides you wish to use before and after each test.
 import * as docker from 'dockerode-mock'
 
 //Apply to all engines
-docker.overides = {
+docker.overrides = {
 	'GET /_ping': { error: 'connection error' },
 	'GET /containers/json?': { ... },
 }
 
 //Apply to specific engines
-docker.overides = {
+docker.overrides = {
 	'GET 192.168.0.5/_ping': 'OK',
 	'GET 192.168.0.5:4243/_ping': 'OK',
 	'GET tcp://192.168.0.5:4243/_ping': { error: 'connection error' }
